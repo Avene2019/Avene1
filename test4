@@ -1,0 +1,26 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Hello, please enter the company name");
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        name = name.toLowerCase();
+        int length = name.length();
+        String reversed = "";
+        for (int i = (length-1);i>=0 ;i--){
+    char character = name.charAt(i);
+    reversed += character;}
+
+    if (name.equals(reversed))
+    {
+        System.out.println("is palindrom");
+        } else {
+        System.out.println("not palindrom");
+    }
+
+    }
+}
