@@ -1,0 +1,22 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    private static void sayHello(String guest,String niceness){
+        System.out.println(niceness+ "to meet you, "+ guest + "!");
+    }
+    public static void main(String[] args) {
+        System.out.println("Hello, who are you?");
+        Scanner sc = new Scanner(System.in);
+    String name = sc.next();
+
+
+    if (name.length()>5) {
+        sayHello(name, "nice ");
+    } else {
+        sayHello(name, "Not nice ");
+    }
+
+    }
+}
