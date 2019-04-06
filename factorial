@@ -1,0 +1,19 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("please enter your number");
+        Scanner sc = new Scanner (System.in);
+        int input = sc.nextInt();
+        int solution = input;
+
+        for (int i=input-1; i>0; i--){
+
+            solution = solution * i;
+        }
+        System.out.println(solution);
+    }
+}
