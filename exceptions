@@ -1,0 +1,37 @@
+package Shape;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class newr {
+    public static void main(String[] args) {
+        int userInput =0;
+
+        try {
+
+                userInput = getUserInput(); }
+        catch (InputMismatchException abc) {
+            System.out.println(abc.getMessage());
+
+        }
+
+        userInput ++;
+        System.out.println("output: "+ userInput);
+    }
+
+        private static int getUserInput() throws InputMismatchException{
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Input a number from 1 to 10");
+            int i = sc.nextInt();
+
+            if(i<1){
+                throw new InputMismatchException("Number too small");
+            } else if (i>10){
+                throw new InputMismatchException("Number too big");}
+            else {
+                return i;
+            }
+        }
+
+    }
+
