@@ -1,0 +1,50 @@
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+    
+    double pcrandom = Math.random();
+        double pcnumber = pcrandom*10;
+        int random = (int) pcnumber;
+    
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        VBox vBox = new VBox();
+
+        TextField guess = new TextField();
+         guess.setPromptText("Enter your guess from 1 to 10");
+         
+        button button = new Button("Start the game");
+
+        vBox.getChildren().addAll(username, button);
+
+        button.setOnAction(event -> {
+
+      	int guessresult = Integer.parseInt(guess);	
+
+        if (random ==guess){
+            System.out.println("your guess is correct!");
+        } else if (random < guess){
+            System.out.println("your guess is too high");
+        }
+        else {
+            System.out.println("your guess is too low");
+        }
+        });
+
+        Scene scene = new Scene(vBox, 640, 480);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+}
